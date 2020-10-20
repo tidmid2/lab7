@@ -1,0 +1,750 @@
+#pragma once
+
+namespace LAB7 {
+
+	using namespace System;
+	using namespace System::ComponentModel;
+	using namespace System::Collections;
+	using namespace System::Windows::Forms;
+	using namespace System::Data;
+	using namespace System::Drawing;
+
+	/// <summary>
+	/// Сводка для MyForm
+	/// </summary>
+	public ref class MyForm : public System::Windows::Forms::Form
+	{
+	public:
+		MyForm(void)
+		{
+			InitializeComponent();
+			//
+			//TODO: добавьте код конструктора
+			//
+		}
+
+	protected:
+		/// <summary>
+		/// Освободить все используемые ресурсы.
+		/// </summary>
+		~MyForm()
+		{
+			if (components)
+			{
+				delete components;
+			}
+		}
+	private: System::Windows::Forms::GroupBox^ age;
+	private: System::Windows::Forms::TextBox^ age1;
+	protected:
+
+
+	private: System::Windows::Forms::GroupBox^ duration;
+	private: System::Windows::Forms::RadioButton^ Female;
+
+
+	private: System::Windows::Forms::RadioButton^ Male;
+
+	private: System::Windows::Forms::GroupBox^ money;
+	private: System::Windows::Forms::TextBox^ money1;
+
+
+	private: System::Windows::Forms::GroupBox^ stage;
+	private: System::Windows::Forms::TextBox^ stage1;
+
+
+	private: System::Windows::Forms::GroupBox^ status;
+	private: System::Windows::Forms::RadioButton^ Jur;
+
+
+	private: System::Windows::Forms::RadioButton^ Phisx;
+
+	private: System::Windows::Forms::GroupBox^ credit;
+	private: System::Windows::Forms::TextBox^ credit1;
+
+
+	private: System::Windows::Forms::GroupBox^ form;
+	private: System::Windows::Forms::RadioButton^ bnal;
+
+
+	private: System::Windows::Forms::RadioButton^ nal;
+
+	private: System::Windows::Forms::GroupBox^ item;
+	private: System::Windows::Forms::TextBox^ item1;
+	private: System::Windows::Forms::GroupBox^ sum;
+
+
+
+	private: System::Windows::Forms::TextBox^ sum1;
+
+
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::GroupBox^ groupBox1;
+	private: System::Windows::Forms::TextBox^ statusk;
+	private: System::Windows::Forms::TextBox^ sumk;
+
+
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::TextBox^ maxsumk;
+	private: System::Windows::Forms::Label^ label3;
+
+
+	protected:
+
+	private:
+		/// <summary>
+		/// Обязательная переменная конструктора.
+		/// </summary>
+		System::ComponentModel::Container ^components;
+
+#pragma region Windows Form Designer generated code
+		/// <summary>
+		/// Требуемый метод для поддержки конструктора — не изменяйте 
+		/// содержимое этого метода с помощью редактора кода.
+		/// </summary>
+		void InitializeComponent(void)
+		{
+			this->age = (gcnew System::Windows::Forms::GroupBox());
+			this->age1 = (gcnew System::Windows::Forms::TextBox());
+			this->duration = (gcnew System::Windows::Forms::GroupBox());
+			this->Female = (gcnew System::Windows::Forms::RadioButton());
+			this->Male = (gcnew System::Windows::Forms::RadioButton());
+			this->money = (gcnew System::Windows::Forms::GroupBox());
+			this->money1 = (gcnew System::Windows::Forms::TextBox());
+			this->stage = (gcnew System::Windows::Forms::GroupBox());
+			this->stage1 = (gcnew System::Windows::Forms::TextBox());
+			this->status = (gcnew System::Windows::Forms::GroupBox());
+			this->Jur = (gcnew System::Windows::Forms::RadioButton());
+			this->Phisx = (gcnew System::Windows::Forms::RadioButton());
+			this->credit = (gcnew System::Windows::Forms::GroupBox());
+			this->credit1 = (gcnew System::Windows::Forms::TextBox());
+			this->form = (gcnew System::Windows::Forms::GroupBox());
+			this->bnal = (gcnew System::Windows::Forms::RadioButton());
+			this->nal = (gcnew System::Windows::Forms::RadioButton());
+			this->item = (gcnew System::Windows::Forms::GroupBox());
+			this->item1 = (gcnew System::Windows::Forms::TextBox());
+			this->sum = (gcnew System::Windows::Forms::GroupBox());
+			this->sum1 = (gcnew System::Windows::Forms::TextBox());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->sumk = (gcnew System::Windows::Forms::TextBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->statusk = (gcnew System::Windows::Forms::TextBox());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->maxsumk = (gcnew System::Windows::Forms::TextBox());
+			this->age->SuspendLayout();
+			this->duration->SuspendLayout();
+			this->money->SuspendLayout();
+			this->stage->SuspendLayout();
+			this->status->SuspendLayout();
+			this->credit->SuspendLayout();
+			this->form->SuspendLayout();
+			this->item->SuspendLayout();
+			this->sum->SuspendLayout();
+			this->groupBox1->SuspendLayout();
+			this->SuspendLayout();
+			// 
+			// age
+			// 
+			this->age->Controls->Add(this->age1);
+			this->age->Location = System::Drawing::Point(43, 12);
+			this->age->Name = L"age";
+			this->age->Size = System::Drawing::Size(206, 41);
+			this->age->TabIndex = 0;
+			this->age->TabStop = false;
+			this->age->Text = L"Возраст";
+			this->age->Enter += gcnew System::EventHandler(this, &MyForm::groupBox1_Enter);
+			// 
+			// age1
+			// 
+			this->age1->Location = System::Drawing::Point(73, 15);
+			this->age1->Name = L"age1";
+			this->age1->Size = System::Drawing::Size(127, 20);
+			this->age1->TabIndex = 0;
+			this->age1->Text = L"0";
+			// 
+			// duration
+			// 
+			this->duration->Controls->Add(this->Female);
+			this->duration->Controls->Add(this->Male);
+			this->duration->Location = System::Drawing::Point(43, 56);
+			this->duration->Name = L"duration";
+			this->duration->Size = System::Drawing::Size(206, 41);
+			this->duration->TabIndex = 30;
+			this->duration->TabStop = false;
+			this->duration->Text = L"Пол";
+			// 
+			// Female
+			// 
+			this->Female->AutoSize = true;
+			this->Female->Location = System::Drawing::Point(164, 18);
+			this->Female->Name = L"Female";
+			this->Female->Size = System::Drawing::Size(36, 17);
+			this->Female->TabIndex = 36;
+			this->Female->Text = L"Ж";
+			this->Female->UseVisualStyleBackColor = true;
+			// 
+			// Male
+			// 
+			this->Male->AutoSize = true;
+			this->Male->Checked = true;
+			this->Male->Location = System::Drawing::Point(124, 18);
+			this->Male->Name = L"Male";
+			this->Male->Size = System::Drawing::Size(34, 17);
+			this->Male->TabIndex = 36;
+			this->Male->TabStop = true;
+			this->Male->Text = L"М";
+			this->Male->UseVisualStyleBackColor = true;
+			// 
+			// money
+			// 
+			this->money->Controls->Add(this->money1);
+			this->money->Location = System::Drawing::Point(43, 106);
+			this->money->Name = L"money";
+			this->money->Size = System::Drawing::Size(206, 41);
+			this->money->TabIndex = 31;
+			this->money->TabStop = false;
+			this->money->Text = L"Доход";
+			// 
+			// money1
+			// 
+			this->money1->Location = System::Drawing::Point(73, 15);
+			this->money1->Name = L"money1";
+			this->money1->Size = System::Drawing::Size(127, 20);
+			this->money1->TabIndex = 0;
+			this->money1->Text = L"0";
+			this->money1->TextChanged += gcnew System::EventHandler(this, &MyForm::money1_TextChanged);
+			// 
+			// stage
+			// 
+			this->stage->Controls->Add(this->stage1);
+			this->stage->Location = System::Drawing::Point(249, 12);
+			this->stage->Name = L"stage";
+			this->stage->Size = System::Drawing::Size(206, 41);
+			this->stage->TabIndex = 31;
+			this->stage->TabStop = false;
+			this->stage->Text = L"Стаж работы";
+			// 
+			// stage1
+			// 
+			this->stage1->Location = System::Drawing::Point(73, 15);
+			this->stage1->Name = L"stage1";
+			this->stage1->Size = System::Drawing::Size(127, 20);
+			this->stage1->TabIndex = 0;
+			this->stage1->Text = L"0";
+			// 
+			// status
+			// 
+			this->status->Controls->Add(this->Jur);
+			this->status->Controls->Add(this->Phisx);
+			this->status->Location = System::Drawing::Point(249, 56);
+			this->status->Name = L"status";
+			this->status->Size = System::Drawing::Size(206, 41);
+			this->status->TabIndex = 31;
+			this->status->TabStop = false;
+			this->status->Text = L"Юридический статус";
+			// 
+			// Jur
+			// 
+			this->Jur->AutoSize = true;
+			this->Jur->Location = System::Drawing::Point(101, 18);
+			this->Jur->Name = L"Jur";
+			this->Jur->Size = System::Drawing::Size(70, 17);
+			this->Jur->TabIndex = 1;
+			this->Jur->Text = L"Юр. лицо";
+			this->Jur->UseVisualStyleBackColor = true;
+			// 
+			// Phisx
+			// 
+			this->Phisx->AutoSize = true;
+			this->Phisx->Checked = true;
+			this->Phisx->Location = System::Drawing::Point(17, 18);
+			this->Phisx->Name = L"Phisx";
+			this->Phisx->Size = System::Drawing::Size(78, 17);
+			this->Phisx->TabIndex = 0;
+			this->Phisx->TabStop = true;
+			this->Phisx->Text = L"Физ. лицо";
+			this->Phisx->UseVisualStyleBackColor = true;
+			// 
+			// credit
+			// 
+			this->credit->Controls->Add(this->credit1);
+			this->credit->Location = System::Drawing::Point(249, 106);
+			this->credit->Name = L"credit";
+			this->credit->Size = System::Drawing::Size(206, 41);
+			this->credit->TabIndex = 32;
+			this->credit->TabStop = false;
+			this->credit->Text = L"Кол-ва просроченных кредитов";
+			// 
+			// credit1
+			// 
+			this->credit1->Location = System::Drawing::Point(73, 15);
+			this->credit1->Name = L"credit1";
+			this->credit1->Size = System::Drawing::Size(127, 20);
+			this->credit1->TabIndex = 0;
+			this->credit1->Text = L"0";
+			// 
+			// form
+			// 
+			this->form->Controls->Add(this->bnal);
+			this->form->Controls->Add(this->nal);
+			this->form->Location = System::Drawing::Point(43, 153);
+			this->form->Name = L"form";
+			this->form->Size = System::Drawing::Size(206, 41);
+			this->form->TabIndex = 33;
+			this->form->TabStop = false;
+			this->form->Text = L"Форма выдачи";
+			// 
+			// bnal
+			// 
+			this->bnal->AutoSize = true;
+			this->bnal->Location = System::Drawing::Point(128, 18);
+			this->bnal->Name = L"bnal";
+			this->bnal->Size = System::Drawing::Size(65, 17);
+			this->bnal->TabIndex = 36;
+			this->bnal->Text = L"Без нал";
+			this->bnal->UseVisualStyleBackColor = true;
+			// 
+			// nal
+			// 
+			this->nal->AutoSize = true;
+			this->nal->Checked = true;
+			this->nal->Location = System::Drawing::Point(73, 18);
+			this->nal->Name = L"nal";
+			this->nal->Size = System::Drawing::Size(45, 17);
+			this->nal->TabIndex = 37;
+			this->nal->TabStop = true;
+			this->nal->Text = L"Нал";
+			this->nal->UseVisualStyleBackColor = true;
+			// 
+			// item
+			// 
+			this->item->Controls->Add(this->item1);
+			this->item->Location = System::Drawing::Point(249, 153);
+			this->item->Name = L"item";
+			this->item->Size = System::Drawing::Size(206, 41);
+			this->item->TabIndex = 34;
+			this->item->TabStop = false;
+			this->item->Text = L"Имущества";
+			// 
+			// item1
+			// 
+			this->item1->Location = System::Drawing::Point(73, 15);
+			this->item1->Name = L"item1";
+			this->item1->Size = System::Drawing::Size(127, 20);
+			this->item1->TabIndex = 0;
+			this->item1->Text = L"0";
+			// 
+			// sum
+			// 
+			this->sum->Controls->Add(this->sum1);
+			this->sum->Location = System::Drawing::Point(43, 194);
+			this->sum->Name = L"sum";
+			this->sum->Size = System::Drawing::Size(206, 41);
+			this->sum->TabIndex = 35;
+			this->sum->TabStop = false;
+			this->sum->Text = L"Сумма";
+			// 
+			// sum1
+			// 
+			this->sum1->Location = System::Drawing::Point(73, 15);
+			this->sum1->Name = L"sum1";
+			this->sum1->Size = System::Drawing::Size(127, 20);
+			this->sum1->TabIndex = 0;
+			this->sum1->Text = L"0";
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(249, 194);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(206, 41);
+			this->button1->TabIndex = 36;
+			this->button1->Text = L"Подать заявку";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			// 
+			// groupBox1
+			// 
+			this->groupBox1->Controls->Add(this->maxsumk);
+			this->groupBox1->Controls->Add(this->label3);
+			this->groupBox1->Controls->Add(this->sumk);
+			this->groupBox1->Controls->Add(this->label2);
+			this->groupBox1->Controls->Add(this->label1);
+			this->groupBox1->Controls->Add(this->statusk);
+			this->groupBox1->Location = System::Drawing::Point(504, 12);
+			this->groupBox1->Name = L"groupBox1";
+			this->groupBox1->Size = System::Drawing::Size(378, 223);
+			this->groupBox1->TabIndex = 37;
+			this->groupBox1->TabStop = false;
+			this->groupBox1->Text = L"Статус Кредита";
+			// 
+			// sumk
+			// 
+			this->sumk->Location = System::Drawing::Point(165, 87);
+			this->sumk->Name = L"sumk";
+			this->sumk->Size = System::Drawing::Size(193, 20);
+			this->sumk->TabIndex = 3;
+			this->sumk->Text = L"0";
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(39, 94);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(85, 13);
+			this->label2->TabIndex = 2;
+			this->label2->Text = L"Сумма кредита";
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(39, 35);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(41, 13);
+			this->label1->TabIndex = 1;
+			this->label1->Text = L"Статус";
+			// 
+			// statusk
+			// 
+			this->statusk->Location = System::Drawing::Point(165, 32);
+			this->statusk->Name = L"statusk";
+			this->statusk->Size = System::Drawing::Size(193, 20);
+			this->statusk->TabIndex = 0;
+			this->statusk->Text = L"Рассмотряется";
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Location = System::Drawing::Point(39, 141);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(117, 13);
+			this->label3->TabIndex = 4;
+			this->label3->Text = L"Макс. сумма кредита";
+			// 
+			// maxsumk
+			// 
+			this->maxsumk->Location = System::Drawing::Point(165, 134);
+			this->maxsumk->Name = L"maxsumk";
+			this->maxsumk->Size = System::Drawing::Size(193, 20);
+			this->maxsumk->TabIndex = 5;
+			this->maxsumk->Text = L"0";
+			// 
+			// MyForm
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->ClientSize = System::Drawing::Size(909, 333);
+			this->Controls->Add(this->groupBox1);
+			this->Controls->Add(this->button1);
+			this->Controls->Add(this->sum);
+			this->Controls->Add(this->item);
+			this->Controls->Add(this->form);
+			this->Controls->Add(this->credit);
+			this->Controls->Add(this->money);
+			this->Controls->Add(this->stage);
+			this->Controls->Add(this->status);
+			this->Controls->Add(this->duration);
+			this->Controls->Add(this->age);
+			this->Name = L"MyForm";
+			this->Text = L"MyForm";
+			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
+			this->age->ResumeLayout(false);
+			this->age->PerformLayout();
+			this->duration->ResumeLayout(false);
+			this->duration->PerformLayout();
+			this->money->ResumeLayout(false);
+			this->money->PerformLayout();
+			this->stage->ResumeLayout(false);
+			this->stage->PerformLayout();
+			this->status->ResumeLayout(false);
+			this->status->PerformLayout();
+			this->credit->ResumeLayout(false);
+			this->credit->PerformLayout();
+			this->form->ResumeLayout(false);
+			this->form->PerformLayout();
+			this->item->ResumeLayout(false);
+			this->item->PerformLayout();
+			this->sum->ResumeLayout(false);
+			this->sum->PerformLayout();
+			this->groupBox1->ResumeLayout(false);
+			this->groupBox1->PerformLayout();
+			this->ResumeLayout(false);
+
+		}
+#pragma endregion
+	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void groupBox1_Enter(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		
+		plusplus();
+	}
+	public: System::Void plusplus() {
+		int age;
+		int stage;
+		int credit;
+		int item;
+		int sum;
+		int doxod;
+
+		int sumkredit;
+		bool arg=0;
+
+		sumkredit = System::Convert::ToInt32(sumk->Text);
+		doxod = System::Convert::ToInt32(money1->Text);
+		age = System::Convert::ToInt32(age1->Text);
+		stage = System::Convert::ToInt32(stage1->Text);
+		credit = System::Convert::ToInt32(credit1->Text);
+		item = System::Convert::ToInt32(item1->Text);
+		sum = System::Convert::ToInt32(sum1->Text);
+		
+		int maxsum;
+		maxsum = System::Convert::ToInt32(maxsumk->Text);
+		if (Phisx->Checked == true) {
+			maxsum = item + 3000000;
+		}
+		else if(Jur->Checked == true){
+			maxsum = item + 30000000;
+		}
+		maxsumk->Text = System::Convert::ToString(maxsum);
+
+		if (Phisx->Checked == true) {
+			if (nal->Checked == true) {
+				if (Male->Checked == true) {
+					if (age >= 18 && age <= 63) {
+						if (stage >= 2) {
+							if (doxod >= 720000/12) {
+								if (credit > 0) {
+									arg = 0;
+									sumkredit = item + sum;//просрочено ОТКАЗ
+								}
+								else {
+									if (sum <= item + 3000000) {
+										arg = 1;
+										sumkredit = item + sum; //Одобрено
+									}
+									else {
+										arg = 0;
+										sumkredit = item + sum; //Превисло макс сумму ОТКАЗ
+									}
+								}
+							}
+							else {
+								arg = 0;
+								sumkredit = item + sum; //Мало Дохода ОТКАЗ
+							}
+						}
+						else {
+							arg = 0;
+							sumkredit = item + sum; //Мало стажировки ОТКАЗ
+						}
+					}
+					else {
+						arg = 0;
+						sumkredit = item + sum; //Возраст неудовлетворительно ОТКАЗ
+					}
+				}
+				else {
+					if (age >= 18 && age <= 58) {
+						if (stage >= 2) {
+							if (doxod >= 720000/12) {
+								if (credit > 0) {
+									arg = 0;
+									sumkredit = item + sum;//просрочка ОТКАЗ
+								}
+								else {
+									if (sum <= item + 3000000) {
+										sumkredit = item + sum;
+										arg = 1; //ОДОБРЕНО
+									}
+									else {
+										arg = 0;
+										sumkredit = item + sum; //Сумма много ОТКАЗ
+									}
+								}
+							}
+							else {
+								arg = 0;
+								sumkredit = item + sum; //Мало Дохода ОТКАЗ
+							}
+						}
+						else {
+							arg = 0;
+							sumkredit = item + sum; // Стажировки мало ОТКАЗ
+						}
+					}
+					else {
+						arg = 0;
+						sumkredit = item + sum; // Возраст неудовлетворительно ОТКАЗ
+					}
+				}
+			}
+			else
+			{
+				if (Male->Checked == true) {
+					if (age >= 18 && age <= 63) {
+						if (stage >= 2) {
+							if (doxod >= 720000/12) {
+								if (credit > 0) {
+									arg = 0; //просрочка ОТКАЗ
+									sumkredit = item + sum;
+								}
+								else {
+									if (sum <= item + 3000000) {
+										sumkredit = item + sum;
+										arg = 1; //ОДОБРЕНО
+									}
+									else {
+										arg = 0;
+										sumkredit = item + sum;//Сумма много ОТКАЗ
+									}
+								}
+							}
+							else {
+								arg = 0;
+								sumkredit = item + sum;//Мало Дохода ОТКАЗ
+							}
+						}
+						else {
+							arg = 0;
+							sumkredit = item + sum;// Стажировки мало ОТКАЗ
+						}
+					}
+					else {
+						arg = 0;
+						sumkredit = item + sum;// Возраст неудовлетворительно ОТКАЗ
+					}
+				}
+				else {
+					if (age >= 18 && age <= 58) {
+						if (stage >= 2) {
+							if (doxod >= 720000/12) {
+								if (credit > 0) {
+									arg = 0; //просрочка ОТКАЗ
+									sumkredit = item + sum;
+								}
+								else {
+									if (sum <= item + 3000000) {
+										arg = 1;
+										sumkredit = item + sum;//ОДОБРЕНО
+									}
+									else {
+										arg = 0;
+										sumkredit = item + sum;//Сумма много ОТКАЗ
+									}
+								}
+							}
+							else {
+								arg = 0;
+								sumkredit = item + sum;//Мало Дохода ОТКАЗ
+							}
+						}
+						else {
+							arg = 0;
+							sumkredit = item + sum;// Стажировки мало ОТКАЗ
+						}
+					}
+					else {
+						arg = 0;
+						sumkredit = item + sum;// Возраст неудовлетворительно ОТКАЗ
+					}
+				}
+			}
+		}
+
+		else
+		{
+			if (nal->Checked == true) {
+				arg = 0; //только безнал ОТКАЗ
+				sumkredit = item + sum;
+			}
+			else {
+				if (Male->Checked == true) {
+					if (age >= 18 && age <= 63) {
+						if (stage >= 5) {
+							if (doxod >= 3000000 / 12) {
+								if (credit > 0) {
+									arg = 0; //просрочка ОТКАЗ
+									sumkredit = item + sum;
+								}
+								else {
+									if (sum <= item + 30000000) {
+										arg = 1;
+										sumkredit = item + sum;//ОДОБРЕНО
+									}
+									else {
+										arg = 0;
+										sumkredit = item + sum;//Сумма много ОТКАЗ
+									}
+								}
+							}
+							else {
+								arg = 0;
+								sumkredit = item + sum;//Мало Дохода ОТКАЗ
+							}
+						}
+						else {
+							arg = 0;
+							sumkredit = item + sum;//дохода мало ОТКАЗ
+						}
+					}
+					else {
+						arg = 0; //Возраст не тот ОТКАЗ
+						sumkredit = item + sum;
+					}
+				}
+				else {
+					if (age >= 18 && age <= 58) {
+						if (stage >= 5) {
+							if (doxod >= 3000000 / 12) {
+								if (credit > 0) {
+									arg = 0; //просрочка ОТКАЗ
+									sumkredit = item + sum;
+								}
+								else {
+									if (sum <= item + 30000000) {
+										arg = 1;
+										sumkredit = item + sum;//ОДОБРЕНО
+									}
+									else {
+										arg = 0;
+										sumkredit = item + sum;//Сумма много ОТКАЗ
+									}
+								}
+							}
+							else {
+								arg = 0;
+								sumkredit = item + sum;//Мало Дохода ОТКАЗ
+							}
+						}
+						else {
+							arg = 0;
+							sumkredit = item + sum;//доход мало ОТКАЗ
+						}
+					}
+					else {
+						arg = 0;//возраст ОТКАЗ
+						sumkredit = item + sum;
+					}
+				}
+			}
+		}
+
+		if (arg = 0) {
+			statusk->Text = System::Convert::ToString("Otkaz");
+			sumk->Text = System::Convert::ToString(sumkredit);
+		}
+		else {
+			statusk->Text = System::Convert::ToString("Odobreno");
+			sumk->Text = System::Convert::ToString(sumkredit);
+		}
+
+
+	}
+private: System::Void money1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+};
+}
